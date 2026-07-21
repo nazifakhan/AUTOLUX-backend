@@ -11,7 +11,7 @@ app.use(express.json());
 // Enable CORS for frontend (Vite dev server on port 5173)
 app.use(
   cors({
-    origin: "http://localhost:5173", // allow your React app
+    origin: "*", // allow your React app
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -27,8 +27,12 @@ const carRoutes = require("./routes/carRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");
 const infoRoutes = require("./routes/infoRoutes");
 const contactRoutes = require("./routes/contactRoutes");
+const counterRoutes = require("./routes/counterRoutes");
+const reachUsRoutes = require("./routes/reachUsRoutes");
 
-// Use routes
+
+app.use("/api/reachus", reachUsRoutes);
+app.use("/api/counters", counterRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/cars", carRoutes);
 app.use("/api/banners", bannerRoutes);
