@@ -22,7 +22,7 @@ npm install
 
 3. Environment Variables
 Create a .env file in the backend root with:
-MONGO_URI=mongodb://localhost:27017/carinfo
+MONGO_URI=create ur cluster n paste it here 
 PORT=5000
 
 ⚠️ Note: The frontend .env file contains VITE_ADMIN_USER and VITE_ADMIN_PASS.
